@@ -18,7 +18,9 @@ window.onscroll = () => {
 };
 
 // Deal Section Counter
-let CountDate = new Date("may 15, 2024 00:00:00").getTime();
+let randNumber = Math.round(Math.random()*100);
+randNumber = randNumber > 0 ? randNumber : 1;
+let CountDate = new Date(new Date().getTime() + randNumber * 60 * 60 * 1000);//new Date("may 15, 2024 00:00:00").getTime();
 
 function Counter() {
   let Now = new Date().getTime();
